@@ -1,0 +1,101 @@
+@use "@assets/scss/common.scss" as *;
+
+#card_sec-1 {
+  width: 100vw;
+  height: 100vh;
+  // background-color: #da1e48;
+  background-color: white;
+  position: relative;
+
+  .invisible_box {
+    // border: 1px solid red;
+    width: 24.6875em;
+    height: 24.9375em;
+    // background-color: red;
+
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -10%);
+  }
+
+  .my_container {
+    .card_wrapper {
+      padding-top: 7.5em;
+
+      .top {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.375em;
+        align-items: center;
+        // border: 1px solid red;
+
+        .img_wrapper {
+          // border: 1px solid red;
+          position: relative;
+          // overflow: hidden;
+          border-radius: 5px;
+
+          &.top_mid {
+            height: 24.9375em;
+          }
+
+          &.top_corner {
+            height: 19.625em;
+          }
+
+          img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-position: center;
+            border-radius: 5px;
+          }
+        }
+      }
+
+      .bottom {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        // border: 1px solid green;
+        gap: 1.375em;
+        margin-top: -1.375em;
+
+        .img_wrapper {
+          height: 16.25em;
+          width: 16.0625em;
+          position: relative;
+          border-radius: 5px;
+          // border: 1px solid red;
+
+          img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-position: center;
+            border-radius: 5px;
+          }
+        }
+
+        .text_holder {
+          // border: 1px solid black;
+          margin-top: 1.375em;
+
+          p {
+            margin-top: 0.5em;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 7.5em;
+            line-height: 1.0833em;
+            text-align: center;
+            color: #323232;
+
+            span {
+              color: #da1e48;
+            }
+          }
+        }
+      }
+    }
+  }
+}
