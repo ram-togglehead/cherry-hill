@@ -3,6 +3,7 @@ import { homeURL } from "./helpers/path";
 import Home from "./pages/Home/Home";
 import Slider from "@pages/Slider";
 import FeaturedProject from "@pages/FeaturedProject";
+import BeforeAfter from "@pages/BeforeAfter";
 
 const Routing = () => {
   return (
@@ -12,6 +13,7 @@ const Routing = () => {
           <Route path={homeURL} element={<Home />} />
           <Route path={"/slider"} element={<Slider />} />
           <Route path={"/featured-project"} element={<FeaturedProject />} />
+          <Route path={"/before-after"} element={<BeforeAfter />} />
         </Routes>
       </main>
     </>
