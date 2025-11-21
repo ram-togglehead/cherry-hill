@@ -1,0 +1,108 @@
+@use "@assets/scss/common.scss" as *;
+
+#slider_sec-1 {
+  width: 100vw;
+  height: 100vh;
+  background-color: #da1e48;
+}
+
+#slider_sec-2 {
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid red;
+  padding-top: 7.5em;
+  background: url("@assets/images/prism.png") no-repeat center;
+  background-size: 37.125em 34.1875em;
+
+  .my_container {
+    position: relative;
+
+    .slider_name {
+      font-family: $URB;
+      color: #323232;
+      font-size: 4em;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      position: absolute;
+      top: 0;
+      left: initial;
+      z-index: 10;
+
+      span {
+        color: #da1e48;
+      }
+    }
+  }
+
+  .slider_wrapper {
+    width: 100vw;
+    height: 100%;
+
+    .sliders {
+      display: flex;
+      height: 100%;
+      position: relative;
+      overflow-x: scroll;
+
+      pointer-events: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        display: none;
+      }
+
+      .slider {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #8c8c8c;
+        border-top: none;
+        border-bottom: none;
+        border-right: none;
+        padding: 10em 0 3.375em 0;
+        position: relative;
+
+        .grayscale {
+          width: 100%;
+          flex-grow: 1;
+          background: white;
+          mix-blend-mode: color;
+        }
+
+        .content {
+          background-color: #f3f3f3;
+          padding: 2.5em;
+          width: 34.1875em;
+          margin: 0 3.3125em 0 1.875em;
+
+          .name {
+            color: #323232;
+            font-size: 2.25em;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 1.1111em;
+          }
+
+          .desc {
+            color: #646464;
+            font-size: 1.25em;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.8em;
+          }
+        }
+      }
+
+      .slider:nth-child(2n) {
+        padding: 13.9375em 0 3.375em 0;
+        .grayscale {
+          display: none;
+        }
+      }
+    }
+  }
+}
